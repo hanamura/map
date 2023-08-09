@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "build": "rm -rf dist && tsc",
     "test": "jest"
   },
   "author": "Taro Hanamura",
@@ -11,5 +12,7 @@
     "@types/jest": "^29.5.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
-  }
+  },
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts"
 }
