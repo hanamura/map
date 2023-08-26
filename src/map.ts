@@ -3,8 +3,8 @@
  */
 export const map: Map = (
   value: number,
-  from: [number, number],
-  to?: [number, number]
+  from: readonly [number, number],
+  to?: readonly [number, number]
 ): number => {
   if (to === undefined) {
     to = from
@@ -19,6 +19,10 @@ export const map: Map = (
 }
 
 interface Map {
-  (value: number, from: [number, number], to: [number, number]): number
-  (value: number, to: [number, number]): number
+  (
+    value: number,
+    from: readonly [number, number],
+    to: readonly [number, number]
+  ): number
+  (value: number, to: readonly [number, number]): number
 }
